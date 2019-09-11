@@ -2,20 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+        stages {
+		stage('build') {
+		  steps {
+			sh 'pip install -r requirements.txt'
+		  }
+		}
+		stage('test') {
+		  steps {
+			sh 'python test.py'
+		  }   
+		}
+	  }
     }
 }
