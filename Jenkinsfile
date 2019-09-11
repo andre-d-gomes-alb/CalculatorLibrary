@@ -1,10 +1,12 @@
 pipeline {
     agent any
-	checkout scm
+
     stages {
 		stage('build') {
 		  steps {
-			echo "build"
+			sh "python -m venv calculator"
+			sh "C:\Users\P058218\calculator\Scripts\activate.bat"
+			sh "pip install -r requirements.txt"
 		  }
 		}
 		stage('test') {
