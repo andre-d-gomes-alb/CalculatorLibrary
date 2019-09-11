@@ -3,9 +3,9 @@ pipeline {
         docker { image 'python:3.7.2' }
     }
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
-                sh 'python --version'
+                sh 'pip install -r requirements.txt'
             }
         }
     }
