@@ -1,12 +1,12 @@
 pipeline {
-    agent { docker { image 'python:3.7.2' } }
+    agent any
 
     stages {
 		stage('build') {
 		  steps {
-			sh "python -m venv calculator"
-			sh "C:/Users/P058218/calculator/Scripts/activate.bat"
-			sh "pip install -r requirements.txt"
+			bat "python -m venv calculator"
+			bat "C:/Users/P058218/calculator/Scripts/activate.bat"
+			bat "pip install -r requirements.txt"
 		  }
 		}
 		stage('test') {
