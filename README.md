@@ -4,3 +4,4 @@
 			 Ativa o ambiente virtual
 			 Instala os requisitos
 	- Tests: Faz testes ao programa
+	- Notifications: Envia email a quem fez as alterações sobre o resultado do build
