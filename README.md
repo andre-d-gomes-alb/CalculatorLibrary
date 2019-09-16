@@ -1,4 +1,5 @@
 # CalculatorLibrary
+	- Utiliza Jenkinsfile
 	- Verifica alterações do GitHub e faz build
 	- Build: Cria um ambiente virtual
 			 Ativa o ambiente virtual
